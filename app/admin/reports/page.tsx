@@ -17,7 +17,7 @@ export default function ReportsPage() {
       ])
       const enriched = await Promise.all((enrRes.data||[]).map(async en => {
         const { count } = await sb.from('progress').select('id',{count:'exact'}).eq('user_id',en.user_id).eq('course_id',en.course_id).eq('completed',true)
-        const total = en.courses?.lectures?.length || 0
+const total = (en.courses as any)?.lectures?.length || 0
         const done = count || 0
         return { ...en, done, total, pct: total > 0 ? Math.round((done/total)*100) : 0 }
       }))
