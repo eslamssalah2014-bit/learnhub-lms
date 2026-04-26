@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Cairo', 'Segoe UI', sans-serif; background: #f8f8f8; }
+.card { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 1.25rem; }
+.btn-primary { background: #534AB7; color: white; border: none; padding: 0.5rem 1.25rem; border-radius: 8px; font-size: 14px; cursor: pointer; }
+.btn-primary:hover { background: #3C3489; }
+.progress-bar { background: #e5e7eb; border-radius: 99px; height: 6px; overflow: hidden; }
+.progress-fill { height: 100%; background: #534AB7; border-radius: 99px; }
